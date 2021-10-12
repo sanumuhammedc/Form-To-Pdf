@@ -1,5 +1,5 @@
 /**
-            **Basic template for input to pdf**   (use as a reference only
+            **Basic template for input to pdf**   (use as a reference only)
 
     <html>
     <head>
