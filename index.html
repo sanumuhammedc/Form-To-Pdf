@@ -1,0 +1,154 @@
+<!-- Look main.js to get template for input to pdf site -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--jspdf cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <!--Jquery cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <!-- Bootstrap cdn -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap style cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <title>Contact Card</title>
+  </head>
+  <body>
+    <!-- Navbar from bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <p onclick="hideAbout()" class="navbar-brand m-0" style="cursor: pointer">
+        Contact Card
+      </p>
+
+      <div class="collapse navbar-collapse ml-5" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li id="home" onclick="hideAbout()" class="nav-item active">
+            <p class="nav-link m-0" style="cursor: pointer">Home</p>
+          </li>
+          <li onclick="hideHome()" id="about" class="nav-item">
+            <p class="nav-link m-0" style="cursor: pointer">About</p>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Home section -->
+    <div class="m-0 p-0 d-block" id="home-sec">
+      <h3 class="text-center my-3">
+        Enter Your Details To Generate contact Card
+      </h3>
+      <!-- Form from bootstrap -->
+      <form class="mx-5 px-5">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            value=""
+            required
+            placeholder="Enter full name..."
+            class="form-control"
+            id="name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            value=""
+            required
+            class="form-control"
+            id="email"
+            placeholder="Enter your personal Email..."
+            aria-describedby="emailHelp"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >We'll never share your email with anyone else.</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input
+            type="number"
+            value=""
+            required
+            class="form-control"
+            id="phone"
+            placeholder="Enter your personal number..."
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >We'll never share your phone number with anyone else.</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input
+            type="text"
+            value=""
+            required
+            class="form-control"
+            id="address"
+            placeholder="Enter your current address..."
+          />
+        </div>
+        <div class="form-group form-check">
+          <input
+            required
+            type="checkbox"
+            class="form-check-input"
+            id="exampleCheck1"
+          />
+          <label class="form-check-label" for="exampleCheck1"
+            >Confirm Details</label
+          >
+        </div>
+        <button type="button" id="button" class="btn btn-primary">
+          Generate
+        </button>
+      </form>
+    </div>
+
+    <!-- About section -->
+    <div id="about-sec" class="container d-none my-5">
+      <div class="jumbotron">
+        <h1 class="display-4">Contact Card</h1>
+        <p class="lead">
+          A simple pdf generator using HTML and JavaScript. This is helpful for
+          providing a certificate, bill or some sort of report for user as per
+          their input. Here I have used a library called jspdf to make dynamic
+          pdf and Bootstrap for styling the html page
+        </p>
+        <hr class="my-4" />
+        <p>
+          We need to create a JPEG image of output document having the space to
+          include user inputs. The input from HTML form is added to image using
+          JavaScript
+        </p>
+        <a
+          class="btn btn-primary btn-lg"
+          href="https://github.com/sanumuhammedc/Form-To-Pdf"
+          role="button"
+          >Learn more</a
+        >
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+    <!--js file-->
+  </body>
+</html>
