@@ -54,6 +54,14 @@
 
               //Saving pdf in required name
               doc.save('Contact Card.pdf');
+              
+              // (comment above line and use code below if you want to preview instead of directly printing)
+              // var string = doc.output("datauristring");
+              //     var embed = "<embed width='100%' height='100%' src='" + string + "'/>";
+              //     var x = window.open();
+              //     x.document.open();
+              //     x.document.write(embed);
+              //     x.document.close();
 
         });
         //function to add input from html form to image and print as document end here 
